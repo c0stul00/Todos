@@ -6,7 +6,8 @@ export default class Position extends Component {
         super(props);
         this.state = {
             lat: 0,
-            lng: 0
+            lng: 0,
+            isLoaded: false
         }
     }
 
@@ -30,9 +31,9 @@ export default class Position extends Component {
 
     render() {
         const { lat, lng, isLoaded } = this.state;
-        if (isLoaded) {
+        if (isLoaded === false) {
             return (
-                <div>
+                <div className="container text-center">
                     <h3>Your position is</h3>
                     <p>Position: {lat.toFixed(3)}, {lng.toFixed(3)}</p>
                     <Weather lat={lat} lng={lng} />

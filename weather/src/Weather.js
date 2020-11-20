@@ -1,18 +1,18 @@
 import React, { Component } from 'react'
 
 const apiUrl = 'https://api.openweathermap.org/data/2.5/weather?';
-const apiKey = '9b726220e98799509abbe60c11864dc1';
+const apiKey = '=9b726220e98799509abbe60c11864dc1';
 
 export default class Weather extends Component {
     constructor(props) {
         super(props);
-        this.state = ({
+        this.state = {
             temp: 0,
             wind_speed: 0,
             wind_direction: 0,
             description: '',
             icon: ''
-        })
+        }
     }
 
      componentDidMount() {
